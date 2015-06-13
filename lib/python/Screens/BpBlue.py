@@ -265,8 +265,8 @@ class BhsysInfo(Screen):
 		
 	def updateInfo(self):
 		rc = system("df -h > /tmp/syinfo.tmp")
-		text = _("BOX\n") + _("Brand:") + "\tVuplus\n"
-		f = open("/proc/stb/info/vumodel",'r')
+		text = _("BOX\n") + _("Brand:") + "\tGOLDEN MEDIA\n"
+		f = open("/proc/stb/info/boxtype",'r')
  		text += _("Model:\t") + f.readline()
  		f.close()
 		f = open("/proc/stb/info/chipset",'r')
@@ -315,8 +315,8 @@ class BhsysInfo(Screen):
 		
 		text += "\n" + _("FIRMWARE") + "\n"
                 text += "Image v.: \t" +  about.getImageTypeString() + "\n"
-		text += "OpenGl v.: \t" +  _("GLS 2.0 ") + "\n"
-                text += "OE CORE v.: \t" +  _("Alliance 3.0 ") + "\n"
+#		text += "OpenGl v.: \t" +  _("GLS 2.0 ") + "\n"
+                text += "OE CORE v.: \t" +  _("Alliance 3.1 ") + "\n"
 		
 		self["lab1"].setText(text)
 		
